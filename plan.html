@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>CPWD | CoffeeRoasters subscription site</title>
+  </head>
+  <body>
+    <header>
+      <div class="mobile">
+        <div class="logo">
+          <img src="assets/shared/desktop/logo.svg" alt="logo">
+        </div>
+        <button type="button"  onclick="toggleNav()" class="nav_toggle" aria-expanded="false" aria-label="Toggle Navigation" id="nav_toggle">
+          <img id="open-nav" src="assets/shared/mobile/icon-hamburger.svg" alt="open menu">
+          <img id="close-nav" class="hidden" src="assets/shared/mobile/icon-close.svg" alt="close menu">
+        </button>
+      </div>
+      <div class="desktop-nav">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="plan.html">Create your plan</a></li>
+          </ul>
+        </nav>  
+      </div>    
+    </header>
+    <main>
+      <div class="mobile-drop-menu hidden" id="mobile_menu">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="plan.html">Create your plan</a></li>
+          </ul>
+        </nav>
+      </div>
+      <section class="p-1">
+        <h1>Create a plan</h1>
+        <p>Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.</p>
+      </section>
+      <section class="p-2">
+        <div class="steps s-plan">
+          <div class="step-p">
+            <span>01</span>
+            <h3>Pick your coffee</h3>
+            <p>Select from our evolving range of artisan coffees. Our beans are ethically 
+            sourced and we pay fair prices for them. There are new coffees in all profiles 
+            every month for you to try out.</p>
+          </div>
+          <div class="step-p">
+            <span>02</span>
+            <h3>Choose the frequency</h3>
+            <p>Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+          </div>
+          <div class="step-p">
+            <span>03</span>
+            <h3>Receive and enjoy!</h3>
+            <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
+          </div>
+        </div>
+      </section>
+      <section class="p-3">
+        <div class="left">
+          <div class="l-nav l-1" data-l-nav>
+            <h4><a href="#a-1">Preferences</a> </h4>
+          </div>
+          <div class="l-nav l-2" data-l-nav>
+            <h4><a href="#a-2">Bean type</a></h4>
+          </div>
+          <div class="l-nav l-3" data-l-nav>
+            <h4><a href="#a-3">Quantity</a></h4>
+          </div>
+          <div class="l-nav l-4" data-l-nav>
+            <h4><a href="#a-4">Grind option</a></h4>
+          </div>
+          <div class="l-nav l-5 clicked" data-l-nav>
+            <h4><a href="#a-5">Deliveries</a></h4>
+          </div>
+        </div>
+        <div class="right">
+          <div class="accordion">
+            <div class="acc" id="a-1">
+              <button class="a-button" data-options>How do you drink your coffee?</button>
+              <div class="card-options hidden" data-card-options>
+                <button class="card" data-card>
+                  <span class="a-title">Capsule</span>
+                  <span class="acc-p">Compatible with Nespresso systems and similar brewers</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Filter</span>
+                  <span class="acc-p">For pour over or drip methods like Aeropress, Chemex, and V60</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Espresso</span>
+                  <span class="acc-p">Dense and finely ground beans for an intense, flavorful experience</span>
+                </button>
+              </div>
+            </div>
+            <div class="acc" id="a-2">
+              <button class="a-button" data-options>What type of coffee?</button>
+              <div class="card-options hidden">
+                <button class="card" data-card>
+                  <span class="a-title">Single origin</span>
+                  <span class="acc-p">Distinct, high quality coffee from a specific family-owned farm</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Decaf</span>
+                  <span class="acc-p">Just like regular coffee, except the caffeine has been removed</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Blended</span>
+                  <span class="acc-p">Combination of two or three dark roasted beans of organic coffees</span>
+                </button>
+              </div>
+            </div>
+            <div class="acc" id="a-3">
+              <button class="a-button" data-options>How much would you like?</button>
+              <div class="card-options hidden">
+                <button class="card" data-card>
+                  <span class="a-title">250g</span>
+                  <span class="acc-p">Perfect for the solo drinker. Yields about 12 delicious cups.</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">500g</span>
+                  <span class="acc-p">Perfect option for a couple. Yields about 40 delectable cups.</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">1000g</span>
+                  <span class="acc-p">Perfect for offices and events. Yields about 90 delightful cups.</span>
+                </button>
+              </div>
+            </div>
+            <div id="grindOption" class="acc">
+              <button class="a-button" data-options id ="a-4">Want us to grind them?</button>
+              <div class="card-options hidden">
+                <button class="card" data-card>
+                  <span class="a-title">Wholebean</span>
+                  <span class="acc-p">Best choice if you cherish the full sensory experience</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Filter</span>
+                  <span class="acc-p">For drip or pour-over coffee methods such as V60 or Aeropress</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Cafetiére</span>
+                  <span class="acc-p">Course ground beans specially suited for french press coffee</span>
+                </button>
+              </div>
+            </div>
+            <div class="acc" id="a-5">
+              <button class="a-button" data-options>How often should we deliver?</button>
+              <div class="card-options hidden">
+                <button class="card" data-card>
+                  <span class="a-title">Every week</span>
+                  <span class="acc-p">$14.00 per shipment. Includes free first-class shipping.</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Every 2 weeks</span>
+                  <span class="acc-p">$17.25 per shipment. Includes free priority shipping.</span>
+                </button>
+                <button class="card" data-card>
+                  <span class="a-title">Every month</span>
+                  <span class="acc-p">$22.50 per shipment. Includes free priority shipping.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Order Summary</p>
+            <h3 id="summary">“I drink my coffee as <span class=""></span>, with a <span></span> type of bean. <span></span> ground ala <span></span>, sent to me <span></span>.”</h3>
+          </div>
+          <div data-button class="button btn disabled" >
+            <a>Create my plan!</a>
+          </div>
+        </div>
+      </section>
+      <div class="modal hidden" id="modal">
+        <div class="modal-box">
+          <div class="m-content">
+            <button id='order_sum'>Order Summary</button>
+            <div class="summary-c">
+              <h4 id="modalSummary">“I drink my coffee as <span></span>, with a <span></span> type of bean. <span></span> ground ala <span></span>, sent to me <span></span>.”</h4>
+              <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
+              <div class="checkout">
+                <span id="price">$14.00 / mo</span>
+                <div class="btn">
+                  <a href="plan.html" class ="mobile-co" data-checkout>Checkout - $14.00 / mo</a>
+                  <a href="plan.html" class = data-checkout>Checkout</a>
+                </div>
+              </div>          
+            </div>          
+          </div>          
+        </div>
+
+        <div class="black-bg"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="logo">
+        <img src="assets/home/desktop/white-logo.png" alt="logo">
+      </div>
+      <div class="footer-links">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="#">Create your plan</a></li>        
+          </ul>
+        </nav>      
+      </div>
+      <div class="social">
+        <div class="facebook"><a href="#"><img src="assets/shared/desktop/icon-facebook.svg" alt="facebook"></a></div>
+        <div class="twitter"><a href="#"><img src="assets/shared/desktop/icon-twitter.svg" alt="twitter"></a></div>
+        <div class="instagram"><a href="#"><img src="assets/shared/desktop/icon-instagram.svg" alt="instagram"></a></div>
+      </div>
+      <div class="attribution">
+        <p>Coded by <a href="https://github.com/Carlos-A-P/coffeeroasters-subscription-site">Carlos Perez</a></p>
+      </div>
+    </footer>
+    
+  </body>
+
+</html>
